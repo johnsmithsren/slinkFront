@@ -1,0 +1,70 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.css';
+.login-title {
+
+  font-size: 33px;
+  color: black;
+  font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+
+.content {
+  padding: 72px 0;
+  flex: 1;
+}
+
+.top {
+  text-align: center;
+}
+
+.login-header {
+  a {
+    text-decoration: none;
+  }
+}
+
+.login-logo {
+  height: 60px;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+
+.desc {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+.login-page {
+  width: 368px;
+  margin: 50px auto 0;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button,
+.signin-form-button {
+  width: 100%;
+}
+
+.clickable-text {
+  color: @primary-color;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: @blue-5;
+  }
+}
+
