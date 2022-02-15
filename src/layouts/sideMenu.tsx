@@ -3,10 +3,6 @@ import { history } from 'umi';
 import { Menu } from 'antd';
 import SubMenu from 'antd/lib/menu/SubMenu';
 
-interface Props {
-  collapsed: boolean;
-}
-
 const PageSideMenu = () => {
   const handleMenuClick = ({ key }: any) => {
     if (key === '/home') {
@@ -32,8 +28,8 @@ const PageSideMenu = () => {
         <Link to="/home">首页</Link>
       </Menu.Item>
       <SubMenu key="server" title="短链接">
-        <Menu.Item key="/server/time">
-          <Link to="/server/time">我的短链</Link>
+        <Menu.Item key="/dashboard">
+          <Link to="/dashboard">我的短链</Link>
         </Menu.Item>
         <Menu.Item key="/server/version">
           <Link to="/server/version">开放API接口</Link>

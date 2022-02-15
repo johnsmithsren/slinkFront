@@ -11,10 +11,18 @@ export default defineConfig({
       component: '@/layouts/index',
       routes: [
         {
-          path: '/dashboard', component: '@/pages/login', wrappers: [
+          path: '/myOrder', component: '@/pages/login', wrappers: [
             '@/wrappers/auth',
           ],
         },
+        {
+          path: '/dashboard', component: '@/pages/dashboard'
+        },
+        // {
+        //   path: '/dashboard', component: '@/pages/dashboard', wrappers: [
+        //     '@/wrappers/auth',
+        //   ],
+        // },
       ],
     },
   ],
