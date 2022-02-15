@@ -16,16 +16,23 @@ export default defineConfig({
           ],
         },
         {
-          path: '/dashboard', component: '@/pages/dashboard'
+          path: '/dashboard', component: '@/pages/dashboard', wrappers: [
+            '@/wrappers/auth',
+          ],
         },
-        // {
-        //   path: '/dashboard', component: '@/pages/dashboard', wrappers: [
-        //     '@/wrappers/auth',
-        //   ],
-        // },
+        {
+          path: '/home', component: '@/pages/dashboard', wrappers: [
+            '@/wrappers/auth',
+          ],
+        },
       ],
     },
   ],
+  proxy: {
+    '/api': {
+      'target': 'http://127.0.0.1:7001/',
+    },
+  },
   fastRefresh: {},
   mfsu: {}
 });

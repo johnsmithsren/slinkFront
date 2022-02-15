@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import LocalStorage from './LocalStorage';
 import request from 'umi-request';
+import baseRquest from './BaseRequest';
 class AuthStore {
   initialize = true;
   isAuthenticated = false;
@@ -32,7 +33,7 @@ class AuthStore {
       username: username,
       password: password,
     };
-    let result = await request.post('/api/v1/login', userData);
+    let result = await baseRquest.post('/login', userData);
     return result;
   }
 

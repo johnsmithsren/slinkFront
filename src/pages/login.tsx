@@ -1,13 +1,15 @@
-import { useHistory } from 'react-router-dom';
 import { Input, Button, Form, Divider } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import Store from '@/utils/Store';
 import './index.less';
 
 const LoginPage = () => {
   const [form] = Form.useForm();
 
-  const handleSubmit = () => {
-    form.validateFields().then(async (values) => {});
+  const handleSubmit = async () => {
+    let values = form.getFieldsValue();
+    let result = await Store.login(values['userName'], values['password']);
+    console.log(result);
   };
   return (
     <div className="container">

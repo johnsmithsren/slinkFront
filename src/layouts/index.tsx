@@ -15,7 +15,6 @@ import cn from 'antd/es/locale/zh_CN';
 import { ReactChild, ReactFragment, ReactPortal, useState } from 'react';
 import './styles.less';
 import { Link } from 'umi';
-import React from 'react';
 import { Observer } from 'mobx-react-lite';
 const { Header, Sider, Content } = Layout;
 const PageLayout = (props: {

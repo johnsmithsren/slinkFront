@@ -27,12 +27,12 @@ const PageSideMenu = () => {
       <Menu.Item key="/home">
         <Link to="/home">首页</Link>
       </Menu.Item>
-      <SubMenu key="server" title="短链接">
+      <SubMenu key="shortLink" title="短链接">
         <Menu.Item key="/dashboard">
           <Link to="/dashboard">我的短链</Link>
         </Menu.Item>
-        <Menu.Item key="/server/version">
-          <Link to="/server/version">开放API接口</Link>
+        <Menu.Item key="/openApi">
+          <Link to="/openApi">开放API接口</Link>
         </Menu.Item>
       </SubMenu>
       <SubMenu key="operation" title="活码">
